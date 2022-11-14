@@ -4,7 +4,7 @@
 
 <head>
         <meta charset="utf-8" />
-        <title>Xegal | Responsive Bootstrap 5 Landing Page Template | Pichforest</title>
+        <title>ADHOC | Inicio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap v5.1.0. Landing Page Template" />
         <meta name="keywords" content="Bootstrap v5.1.0., premium, marketing, multipurpose" />
@@ -44,71 +44,13 @@
         <!-- END PRELOADER -->
 
         <!-- STRAT NAVBAR -->
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top sticky">
-            <div class="container">
-                <a class="navbar-brand" href="index-2.html">
-                    <img src="{% static 'images/logo-light.png' %}" alt="logo" height="24" class="logo-light" />
-                    <img src="{% static 'images/logo-dark.png' %}" alt="logo" height="24" class="logo-dark" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="mdi mdi-menu"></span>
-                </button>
-                <!--end button-->
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul id="navbar-navlist" class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services" class="nav-link">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#features" class="nav-link">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#team" class="nav-link">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#blog" class="nav-link">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                    <!--end navbar nav-->
-                    <div class="phone-call ms-2 mb-3 mb-lg-0">
-                        <a href="#" class="nav-link"><i class="mdi mdi-phone me-1"></i> +00 1234 5678 90</a>
-                    </div>
-                </div>
-                <!--end collapse-->
-            </div>
-            <!--end container-->
-        </nav>
+        {% include "base/componentes/navegacion.html" %}
         <!-- END NAVBAR -->
         {% block contenido %}
 
 
         {% endblock %}
-        <div class="footer-alt py-4 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-center text-muted">
-                            <p class="mb-0 f-15">
-                                <script>document.write(new Date().getFullYear())</script> &copy; Xegal - Premium Landing Template by <a href="https://pichforest.com/" target="_blank" class="text-reset text-decoration-underline">Pichforest</a>
-                            </p>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </div>
+        {% include "base/componentes/footer.html" %}
         <!--end footer-alt-->
         <!-- END FOOTER -->
 
