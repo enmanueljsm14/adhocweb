@@ -89,3 +89,22 @@ class servicios(models.Model):
         verbose_name = "Servicio"
         verbose_name_plural = "Servicios"
 
+
+class contact(models.Model):
+    id_contact = models.AutoField(auto_created=True, primary_key=True, serialize=False)
+    nombre = models.CharField(max_length=250)
+    correo = models.CharField(max_length=250)
+    asunto = models.CharField(max_length=2500)
+    mensaje = models.CharField(max_length=25000)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    estado=models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.asunto
+
+    class Meta:
+        ordering = ["id_contact"]
+        verbose_name = "Contacto"
+        verbose_name_plural = "Contactos"
+
