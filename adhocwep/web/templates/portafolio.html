@@ -5,7 +5,7 @@
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
                             <h3>Nuestro <span class="text-primary">portafolio</span></h3>
-                            <p class="text-muted mb-0">Start working with Xegal that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                            <p class="text-muted mb-0"></p>
                         </div>
                     </div>
                     <!--end col-->
@@ -23,14 +23,13 @@
                             </div>
                             <div class="blog-content card-body p-4">
                                 <ul class="list-inline text-muted mb-0">
-                                    <li class="list-inline-item fs-14"><i class="mdi mdi-calendar-month me-1"></i>{{portafolio.fecha}}</li>
+                                    <li class="list-inline-item fs-14"><i class="mdi mdi-calendar-month me-1"></i>{{portafolio.fecha|date:'m-Y' }}</li>
 
                                 </ul>
                                 <a href="#" class="primary-link">
                                     <h5 class="my-3">{{portafolio.descripcion}}</h5>
                                 </a>
-                                <a href="#" class="text-secondary">Read More <i
-                                        class="mdi mdi-arrow-right align-middle"></i></a>
+
                             </div>
                         </div><!-- end blog-box -->
                     </div>
