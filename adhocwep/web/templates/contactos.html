@@ -1,0 +1,123 @@
+<section class="section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="text-center mb-5">
+                            <h3><span class="text-primary"> Contáctanos</span></h3>
+
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="Contact-info d-flex align-items-center">
+                            <div class="icon flex-shrink-0">
+                                <i class="mdi mdi-map-marker"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="text-muted mb-0">LAS FLORES 249, SAN ISIDRO, LIMA PERU</p>
+                            </div>
+                        </div>
+                        <div class="Contact-info d-flex align-items-center mt-3">
+                            <div class="icon flex-shrink-0">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="text-muted mb-0">(+51) 1-222-5994</p>
+                            </div>
+                        </div>
+                        <div class="Contact-info d-flex align-items-center mt-3">
+                            <div class="icon flex-shrink-0">
+                                <i class="mdi mdi-cellphone"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="text-muted mb-0">(+51) 997-089-183</p>
+                            </div>
+                        </div>
+                        <div class="Contact-info d-flex align-items-center mt-4">
+                            <div class="icon flex-shrink-0">
+                                <i class="mdi mdi-email"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="text-muted mb-0">bernardo_ohara@adhocperu.com</p>
+                            </div>
+                        </div>
+                        <div class="Contact-info d-flex align-items-center mt-4">
+                            <div class="icon flex-shrink-0">
+                                <i class="mdi mdi-clock-time-four-outline"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="text-muted mb-0">Lunes - Sabado 8:00 am - 6:30 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="mt-4 mt-lg-0">
+
+                            	{% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}">
+                                           {{message}}
+                                         </div>
+                                       {% endfor %}
+                                {% endif %}
+
+                            <form method="post" name="myForm" onsubmit="return validateForm()">
+
+                                {% csrf_token %}
+                                <p id="error-msg"></p>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Nombres</label>
+
+                                            {{ form.nombre }}
+
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Correo</label>
+                                            {{ form.correo }}
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label">Titulo</label>
+                                            {{ form.asunto }}
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <label for="comments" class="form-label">Mensaje</label>
+                                            {{ form.mensaje }}
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+                                <!--end row-->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button type="submit" id="submit" name="send" class="btn btn-primary">Enviar Mensaje<i
+                                                class="mdi mdi-telegram ms-2"></i></button>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+                                <!--end row-->
+                            </form> <!-- end form -->
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </section>
